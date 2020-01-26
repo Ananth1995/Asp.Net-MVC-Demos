@@ -1,0 +1,22 @@
+﻿@model IEnumerable<WebFormDemo.Models.Employee>
+@using WebFormDemo.Models
+@{
+    ViewBag.Title = "Index";
+}
+<div style="font-family:Arial">
+
+    <h2>Index</h2>
+
+    <ul>
+        @foreach(Employee employee in Model)
+        {
+        <li>
+            @Html.ActionLink(employee.Name, "GetDetails", new { id = employee.EmployeeId })
+        </li>
+        }
+    </ul>
+    @Html.ActionLink("Bact to Departments","Index","Department")
+</div>
+
+
+

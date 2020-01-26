@@ -1,0 +1,37 @@
+﻿@model WebFormDemo.Models.Employee
+
+@{
+    ViewBag.Title = "GetDetails";
+}
+
+<div style="font-family:Arial">
+    <h2>GetDetails</h2>
+    <table>
+        <tr>
+            <td>
+                <b>EmployeeName:</b>
+            </td>
+            <td>
+                @Model.Name
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <b>Gender:</b>
+            </td>
+            <td>
+                @Model.Gender
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <b>City:</b>
+            </td>
+            <td>
+                @Model.City
+            </td>
+        </tr>
+    </table>
+    @Html.ActionLink("Back to list", "Index", new { id=Model.DepartmentId})
+</div>
+
